@@ -89,3 +89,4 @@ tests/build
 tests/qaseio.lock
 
 constants.py
+./constants.py
