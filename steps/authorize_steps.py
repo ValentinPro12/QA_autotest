@@ -22,3 +22,4 @@ def login(username: str, password: str, remember_me: int, auth_type: str, expect
     response = requests.post(url=os.getenv('QMT_URL') + "authorization/login", json=request_body)
     expect_equal(check_name="Код ответа сервера", actual_value=response.status_code,
                  expected_value=expected_status_code)
+
