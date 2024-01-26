@@ -1,13 +1,14 @@
 import os
 
+from constants import USERNAME_QMT, PASSWORD_QMT, USERNAME_AAA, PASSWORD_AAA
 from steps.authorize_steps import login
 
 
 def test_success_login_with_qmt_type():
     """Успешная авторизация пользователя с типом входа QMT."""
     login(
-        username=os.getenv('USER_QMT'),
-        password=os.getenv('PASSWORD_QMT'),
+        username=USERNAME_QMT,
+        password=PASSWORD_QMT,
         remember_me=1,
         auth_type="QMT",
         expected_status_code=200
@@ -17,8 +18,8 @@ def test_success_login_with_qmt_type():
 def test_success_login_with_aaa_type():
     """Успешная авторизация пользователя с типом входа AAA."""
     login(
-        username=os.getenv('USER_AAA'),
-        password=os.getenv('PASSWORD_AAA'),
+        username=USERNAME_AAA,
+        password=PASSWORD_AAA,
         remember_me=1,
         auth_type="AAA",
         expected_status_code=200

@@ -87,6 +87,5 @@ qaseio.lock
 failures
 tests/build
 tests/qaseio.lock
-
 constants.py
 ./constants.py
